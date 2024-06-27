@@ -3,55 +3,55 @@
 
 using namespace std;
 
-float bealave(float adadeyek, float adadedo) {
-    return adadeyek + adadedo;
+float plus(float num1, float num2) {
+    return num1 + num2;
 }
 
-float manfi(float adadeyek, float adadedo) {
-    return adadeyek - adadedo;
+float negative(float num1, float num2) {
+    return num1 - num2;
 }
 
-float zarbdar(float adadeyek, float adadedo) {
-    return adadeyek * adadedo;
+float multiply(float num1, float num2) {
+    return num1 * num2;
 }
 
-float taghsim(float adadeyek, float adadedo) {
-    if (adadedo == 0) {
-        cout << "Dashi nemitunam adado taghsim bar 0 konam ke" << endl;
+float divide(float num1, float num2) {
+    if (num2 == 0) {
+        cout << "Sorry, cannot divide by Zero." << endl;
         Sleep(3000);
         exit(NULL);
     }
-    return adadeyek / adadedo;
+    return num1 / num2;
 }
 
 int main() {
-    char chikarkonam;
-    float numberone, numbertwo;
+    char operation;
+    float numb1, numb2;
 
     cout << "Ye adad begoo: ";
-    cin >> numberone;
+    cin >> numb1;
 
     cout << "Amali ke mikhay anjam bedam roo entekhab kon ( + | - | * | / ): ";
-    cin >> chikarkonam;
+    cin >> operation;
 
     cout << "Ye adade dige ham begoo ke kar dar biyad: ";
-    cin >> numbertwo;
+    cin >> numb2;
 
-    switch (chikarkonam) {
+    switch (operation) {
     case '+':
-        cout << "Hasel mishe: " << bealave(numberone, numbertwo) << endl;
+        cout << "Result is: " << plus(numb1, numb2) << endl;
         Sleep(3000);
         exit(NULL);
     case '-':
-        cout << "Hasel mishe: " << manfi(numberone, numbertwo) << endl;
+        cout << "Result is: " << negative(numb1, numb2) << endl;
         Sleep(3000);
         exit(NULL);
     case '*':
-        cout << "Hasel mishe: " << zarbdar(numberone, numbertwo) << endl;
+        cout << "Result is: " << multiply(numb1, numb2) << endl;
         Sleep(3000);
         exit(NULL);
     case '/':
-        cout << "Hasel mishe: " << taghsim(numberone, numbertwo) << endl;
+        cout << "Result is: " << divide(numb1, numb2) << endl;
         Sleep(3000);
         exit(NULL);
     default:
